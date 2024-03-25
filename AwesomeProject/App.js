@@ -1,11 +1,12 @@
 import { StatusBar } from 'expo-status-bar';
 import { Button, StyleSheet, Text, View} from 'react-native';
+import Buttons from './components/Buttons';
 
 export default function App() {
   return (
     <View style={styles.container}>
-      <Text>Open up App.js to start working on your app!</Text>
-      <Button>1</Button>
+      <Text>fdsfs</Text>
+      <Buttons />
       <StatusBar style="auto" />
     </View>
   );
@@ -18,4 +19,7 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     justifyContent: 'center',
   },
+  button: {
+    backgroundColor: 'white'
+  }
 });
