@@ -1,14 +1,29 @@
 import { StatusBar } from 'expo-status-bar';
 import { Button, StyleSheet, Text, View, TouchableOpacity } from 'react-native';
 import Buttons from './components/Buttons';
+import { useState } from 'react';
 
 export default function App() {
+  const { value1, setValue } = useState("0");
+  
   return (
     <View style={styles.container}>
       <View style={styles.row}>
-        <Buttons value="7" color="#222222" />
-        <Buttons value="8" color="#222222" />
-        <Buttons value="9" color="#222222" />
+        <Text value={value1} style={{color: "white"}}>
+        </Text>
+      </View>
+
+      <View style={styles.row}>
+        <Buttons value="C" color="#7D7F7C" />
+        <Buttons value="+/-" color="#7D7F7C" />
+        <Buttons value="%" color="#7D7F7C" />
+        <Buttons value="/" color="#FFAC1C" />
+      </View>
+
+      <View style={styles.row}>
+        <Buttons value="7" color="#222222" setValue={setValue} />
+        <Buttons value="8" color="#222222" setValue={setValue} />
+        <Buttons value="9" color="#222222" setValue={setValue} />
         <Buttons value="x" color="#FFAC1C" />
       </View>
 

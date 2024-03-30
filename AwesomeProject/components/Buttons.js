@@ -17,6 +17,7 @@ export default function Buttons(props) {
                 marginRight: 10,
                 marginBottom: 10
             }}
+            onPress={() => props.setValue(props.value)}
         >
             <Text style={{color: "white"}}>{props.value}</Text>
         </TouchableOpacity>
